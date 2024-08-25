@@ -368,13 +368,14 @@ export interface ApiChatSessionChatSession extends Schema.CollectionType {
     singularName: 'chat-session';
     pluralName: 'chat-sessions';
     displayName: 'ChatSession';
+    description: '';
   };
   options: {
     draftAndPublish: true;
   };
   attributes: {
     Message: Attribute.String;
-    admin_user: Attribute.Relation<
+    username: Attribute.Relation<
       'api::chat-session.chat-session',
       'oneToOne',
       'admin::user'
